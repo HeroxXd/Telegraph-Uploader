@@ -33,17 +33,16 @@ logging.info("Starting bot...")
 @bot.on(events.NewMessage(incoming=True, pattern="^/start"))
 async def start_(event):
     await event.reply(
-        "Hi {}!\nI am a Telegraph Uploader Bot Commands\n`/tm<reply to media>`\n`/txt <reply to text>`. \n\n**Usage:** This bot will help to get Telegraph Link of Media or Text!".format(
+        "Hi {}!\nI am a Telegraph photo Uploader Bot Commands\n`/tm<reply to media>`\n`/txt <reply to text>`. \n\n**Usage:** This bot will help to get Telegraph Link of Media or Text!".format(
             (await bot.get_entity(event.sender_id)).first_name
         ),
         buttons=[
             [
-                Button.url("Repo🌟", url="https://github.com/msy1717/Telegraph-Uploader"),
                 Button.url(
-                    "Developer⚡️", url="https://t.me/Godmrunal"
+                    "Developer", url="https://t.me/HEROX_XD"
                 ),
             ],
-            [Button.url("Channel🌈", url="https://t.me/Botz_Official")],
+            [Button.url("Network", url="https://t.me/DESTROYER_NETWORK")],
         ],
     )
 
@@ -106,7 +105,7 @@ async def _(event):
             ms = (end - start).seconds
             await event.reply("Pasted to https://telegra.ph/{} in {} seconds.".format(response["path"], ms), link_preview=True)
     else:
-        await event.reply("Reply to a message to get a permanent telegra.ph link.")
+        await event.reply("Reply to a message to get a permanent telegra.ph link @DESTROYER_NETWORK.")
 
 
 def resize_image(image):
@@ -114,6 +113,6 @@ def resize_image(image):
     im.save(image, "PNG")
 
 
-logging.info("\n\nBot has started.\n(c) @Godmrunal")
+logging.info("\n\nBot has started.\n(c) @herox_xd")
 
 bot.run_until_disconnected()
